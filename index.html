@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+
+
+    </head>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+        li {
+            background-color: #e8d7c9;
+            margin: 5px;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            float: none;
+            width: 450px;
+        }
+        svg {
+            border-radius: 5px;
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+
+        }
+
+
+
+    </style>
+    <body>
+        <div class="app" >
+            <div style="text-align: center">
+                <h1 style="color: #008cba">TodoList</h1>
+                <div class="form">
+                    <input class="input" style="height: 30px;outline: none;color: black" />
+                    <button class="submit-btn" style="height: 35px;background-color: #008cba;border-radius: 5px;
+                color: white;outline: none;border: none;width: 100px;cursor: pointer">
+                        submit
+                    </button>
+                </div>
+
+            </div>
+
+
+
+            <div style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-top: 20px">
+                <div style="background-color: #efeeee;height: 500px;border: 1px solid #d7d4d4;border-radius: 20px">
+                    <div style="margin-top: 20px;margin-left: 20px;font-weight: bold;">
+                        Pending Tasks
+                    </div>
+                    <ul class="todo-list">
+
+                    </ul>
+                </div>
+
+
+                <div style="background-color: #efeeee;height: 500px;width: 500px;border: 1px solid #d7d4d4;border-radius: 20px;margin-left: 10px">
+                    <div style="margin-top: 20px;margin-left: 20px;font-weight: bold;">
+                        Completed Tasks
+                    </div>
+                    <ul class="complete-list">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="index.js"></script>
+
+    <script>
+        function onInputChange(event) {
+            console.log(event.target.value)
+            document.querySelector('.input-value').value = event.target.value;
+        }
+    </script>
+</html>
